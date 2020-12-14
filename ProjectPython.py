@@ -28,6 +28,10 @@ if __name__ == "__main__":
             Q3 = data['age'].quantile(0.75)
             covariance = data.age.cov(data.IQ)
             corr_coeff = data.age.corr(data.IQ, method='pearson')
+            plt.scatter(data.age, data.IQ, marker='*', c='r')
+            plt.xlabel('Age')
+            plt.ylabel('IQ')
+            plt.title("Relation between Age and IQ")
 
 
             print('Mean age : ' + str(mean))
@@ -40,6 +44,8 @@ if __name__ == "__main__":
             print('Quartile Q3 of age: ' + str(Q3))
             print('Covariance between age and IQ : ' + str(covariance))
             print('Correlation coefficient between age and IQ:' + str(corr_coeff))
+            print('Plot relation between age and IQ: ' + str(plt.show()))
 
         else:
             print("%s does not exist" % name)
+
